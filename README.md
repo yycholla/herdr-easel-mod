@@ -1,13 +1,13 @@
 # Easel for Herdr
 
 A native GPUI artifact review pane: versions, source, annotations and agent chat
-inside **stock Herdr**. No custom Herdr build or replacement layout is needed.
+inside **Herdr**.
 
 ![Easel in Herdr](preview.png)
 
 [RECIPE.md](RECIPE.md) is the brief for rebuilding this experience from an empty
 folder. `mods/easel/` is one working build. The supporting Rust source is included
-so installation does not depend on access to the private Easel development repo.
+for building the helper and MCP server.
 
 ## Before installing
 
@@ -67,14 +67,6 @@ fixtures/      sample artifacts used by the checks
 Do not copy `RECIPE.md` or `preview.png` into Herdr's mod directory. If the `easel`
 name is occupied, follow the recipe's rename instructions and rebuild the MCP
 server's matching mod name; do not overwrite the existing mod.
-
-## Rex companion
-
-For Easel beside Rex terminals, install the separate
-[Herdr Rex bridge](https://github.com/yycholla/herdr-rex-bridge). It exposes Rex
-through hc's existing machine transport and preserves Herdr mod panes across
-Rex layout changes. The bridge is an external program, not another JavaScript
-mod or a replacement Herdr layout.
 
 ## Check
 
