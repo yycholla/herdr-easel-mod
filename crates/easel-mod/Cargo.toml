@@ -1,0 +1,18 @@
+[package]
+name = "easel-mod"
+description = "Out-of-process backend for the Easel Herdr mod"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "gpui-artifacts-mod"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+easel-interp.workspace = true
+easel-protocol.workspace = true
+easel-compiler.workspace = true

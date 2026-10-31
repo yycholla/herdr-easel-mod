@@ -1,0 +1,11 @@
+[package]
+name = "easel-protocol"
+description = "Messages between the GPUI artifacts MCP server and viewer"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[dependencies]
+easel-interp.workspace = true
+serde.workspace = true
+serde_json.workspace = true

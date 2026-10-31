@@ -1,0 +1,30 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+# Pinned: gpui-pre 0.3.8 is what Herdr builds on, so the renderer can be
+# embedded there. Its lib name is `gpui`. The compile sandbox uses the same
+# pin so interpreted and compiled artifacts match.
+gpui = { package = "gpui-pre", version = "=0.3.8" }
+gpui_platform = { package = "gpui-pre-platform", version = "=0.3.8", features = ["font-kit", "x11", "wayland"] }
+syn = { version = "2", features = ["full", "extra-traits", "printing", "visit"] }
+proc-macro2 = { version = "1", features = ["span-locations"] }
+quote = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+thiserror = "2"
+futures = "0.3"
+
+easel-interp = { path = "crates/easel-interp" }
+easel-protocol = { path = "crates/easel-protocol" }
+easel-compiler = { path = "crates/easel-compiler" }
+
+[profile.dev.package."*"]
+opt-level = 2

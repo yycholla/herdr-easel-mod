@@ -1,0 +1,6 @@
+The Easel Herdr mod and supporting crates are extracted from Easel.
+Copyright the Easel contributors. Licensed under MIT OR Apache-2.0.
+The supporting workspace includes only the interpreter, protocol, compiler,
+mod backend and MCP server needed by this distribution. The standalone viewer,
+private repository history, personal settings, project data and local binaries
+are not included.

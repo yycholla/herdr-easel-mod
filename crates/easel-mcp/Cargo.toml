@@ -1,0 +1,16 @@
+[package]
+name = "easel-mcp"
+description = "MCP server exposing GPUI artifacts to Claude"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "gpui-artifacts-mcp"
+path = "src/main.rs"
+
+[dependencies]
+easel-protocol.workspace = true
+easel-interp.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true

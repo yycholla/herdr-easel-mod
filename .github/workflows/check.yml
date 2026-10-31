@@ -1,0 +1,14 @@
+name: check
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  rust-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8
+        with:
+          toolchain: stable
+      - run: cargo test --locked
+      - run: cargo build --locked -p easel-mod -p easel-mcp
