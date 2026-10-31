@@ -68,6 +68,14 @@ Do not copy `RECIPE.md` or `preview.png` into Herdr's mod directory. If the `eas
 name is occupied, follow the recipe's rename instructions and rebuild the MCP
 server's matching mod name; do not overwrite the existing mod.
 
+## Rex companion
+
+For Easel beside Rex terminals, install the separate
+[Herdr Rex bridge](https://github.com/yycholla/herdr-rex-bridge). It exposes Rex
+through hc's existing machine transport and preserves Herdr mod panes across
+Rex layout changes. The bridge is an external program, not another JavaScript
+mod or a replacement Herdr layout.
+
 ## Check
 
 ```sh
